@@ -43,6 +43,11 @@ ggplot(data = mpg) +
   facet_grid(drv ~ cyl)
 
 #3.5.1-4
-
+# What are the advantages to using faceting instead of the colour aesthetic? What
+# are the disadvantages? How might the balance change if you had a larger dataset?
+  
+ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = displ, y = hwy)) + 
+  facet_wrap(~ class, nrow = 2)
 
 
